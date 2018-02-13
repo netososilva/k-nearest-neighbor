@@ -1,0 +1,27 @@
+Car Evaluation data set
+
+1: Description.
+
+Car Evaluation Database was derived from a simple hierarchical decision model. The model evaluates cars according to six input attributes: buying, maint, doors, persons, lug_boot, safety.
+
+Because of known underlying concept structure, this database may be particularly useful for testing constructive induction and structure discovery methods. 
+
+2: Type.			Classification	
+3: Origin.			Real world
+4: Instances.		1728
+5: Features.		6
+6: Classes.			4	
+7: Missing values.	No
+
+8: Header.
+
+@relation car
+@attribute Buying {vhigh,high,med,low}
+@attribute Maint {vhigh,high,med,low}
+@attribute Doors {2,3,4,5more}
+@attribute Persons {2,4,more}
+@attribute Lug_boot {small,med,big}
+@attribute Safety {low,med,high}
+@attribute Acceptability {unacc,acc,vgood,good}
+@inputs Buying, Maint, Doors, Persons, Lug_boot, Safety
+@output Acceptability
