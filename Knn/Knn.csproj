@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{50910B84-99C9-4811-965A-ECA06540593D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Knn</RootNamespace>
+    <AssemblyName>Knn</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseDeDados\Arquivo.cs" />
+    <Compile Include="BaseDeDados\Base.cs" />
+    <Compile Include="BaseDeDados\Entrada.cs" />
+    <Compile Include="BaseDeDados\Voto.cs" />
+    <Compile Include="Estatistica\Desempate.cs" />
+    <Compile Include="Calculo\Distancia.cs" />
+    <Compile Include="Calculo\Formulas\BrayCurtis.cs" />
+    <Compile Include="Calculo\Formulas\Canberra.cs" />
+    <Compile Include="Calculo\Formulas\Chebyshev.cs" />
+    <Compile Include="Calculo\Formulas\Correlacional.cs" />
+    <Compile Include="Calculo\Formulas\Cosseno.cs" />
+    <Compile Include="Calculo\Formulas\CossenoSimilaridade.cs" />
+    <Compile Include="Calculo\Formulas\DistanciaCorrelacional.cs" />
+    <Compile Include="Calculo\Formulas\DistanciaDeCosseno.cs" />
+    <Compile Include="Calculo\Formulas\DistanciaDeCossenoSimilaridade.cs" />
+    <Compile Include="Calculo\Formulas\DistanciaDeJaccard.cs" />
+    <Compile Include="Calculo\Formulas\Euclidiana.cs" />
+    <Compile Include="Calculo\Formulas\Hamming.cs" />
+    <Compile Include="Calculo\Formulas\Jaccard.cs" />
+    <Compile Include="Calculo\Formulas\Manhattan.cs" />
+    <Compile Include="Calculo\Formulas\Minkowski.cs" />
+    <Compile Include="Estatistica\Formulas\DesvioPadrao.cs" />
+    <Compile Include="Estatistica\Formulas\Variancia.cs" />
+    <Compile Include="Helper\Calculo.cs" />
+    <Compile Include="Estatistica\Formulas\Media.cs" />
+    <Compile Include="Helper\ConvertHelper.cs" />
+    <Compile Include="Classificador\Knn.cs" />
+    <Compile Include="MatrizDeConfusao.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
